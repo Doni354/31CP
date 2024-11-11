@@ -1,14 +1,16 @@
 <?= $this->extend('admin/template/template'); ?>
-<?= $this->section('content'); ?>
+<?= $this->Section('content'); ?>
+
 
 <div class="app-content pt-3 p-md-3 p-lg-4">
     <div class="container-xl">
         <div class="row g-3 mb-4 align-items-center justify-content-between">
             <div class="col-auto">
-                <h1 class="app-page-title mb-0">Daftar Artikel</h1>
+                <h1 class="app-page-title mb-0">Daftar Meta</h1>
             </div>
+            </br>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a href="<?php echo base_url() . "admin/artikel/tambah" ?>" class="btn btn-primary me-md-2"> + Tambah Artikel</a>
+                <a href="<?php echo base_url() . "admin/meta/tambah" ?>" class="btn btn-primary me-md-2"> + Tambah Meta</a>
             </div>
         </div>
         <div class="tab-content" id="orders-table-tab-content">
@@ -24,29 +26,30 @@
                             <table class="table app-table-hover mb-0 text-left">
                                 <thead>
                                     <tr>
-                                        <th class="text-center" valign="middle">Judul Artikel (ID)</th>
-                                        <th class="text-center" valign="middle">Judul Artikel (EN)</th>
-                                        <th class="text-center" valign="middle">Deskripsi Artikel (ID)</th>
-                                        <th class="text-center" valign="middle">Deskripsi Artikel (EN)</th>
-                                        <th class="text-center" valign="middle">Foto Artikel</th>
+                                        <th class="text-center" valign="middle">Nama Halaman</th>
+                                        <th class="text-center" valign="middle">Meta Title (Id)</th>
+                                        <th class="text-center" valign="middle">Meta Deskripsi (Id)</th>
+                                        <th class="text-center" valign="middle">Meta Title (En)</th>
+                                        <th class="text-center" valign="middle">Meta Deskripsi (En)</th>
                                         <th class="text-center" valign="middle">Aksi</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    <?php foreach ($artikels as $artikel) : ?>
+                                    <?php foreach ($all_data_meta as $tampilMeta) : ?>
                                         <tr>
-                                            <td><?= $artikel->judul_artikel ?></td>
-                                            <td><?= $artikel->judul_artikel_en ?></td>
-                                            <td><?= $artikel->deskripsi_artikel ?></td>
-                                            <td><?= $artikel->deskripsi_artikel_en ?></td>
-                                            <td><img src="<?= base_url() . 'asset-user/images/' . $artikel->foto_artikel ?>" class="img-fluid" alt="Foto artikel"></td>
+                                            <td><?= $tampilMeta['nama_halaman'] ?></td>
+                                            <td><?= $tampilMeta['meta_title_id'] ?></td>
+                                            <td><?= $tampilMeta['meta_description_id'] ?></td>
+                                            <td><?= $tampilMeta['meta_title_en'] ?></td>
+                                            <td><?= $tampilMeta['meta_description_en'] ?></td>
                                             <td valign="middle">
                                                 <div class="d-grid gap-2">
-                                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $artikel->id_artikel ?>">
+                                                    <!--<a href="<?= base_url('admin/meta/delete') . '/' . $tampilMeta['id_seo'] ?>" class="btn btn-danger">Hapus</a>-->
+                                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $tampilMeta['id_seo'] ?>">
                                                         Hapus
                                                     </button>
-                                                    <a href="<?= base_url('admin/artikel/edit') . '/' . $artikel->id_artikel ?>" class="btn btn-primary">Ubah</a>
+                                                    <a href="<?= base_url('admin/meta/edit') . '/' . $tampilMeta['id_seo'] ?>" class="btn btn-primary">Ubah</a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -62,8 +65,8 @@
 </div><!--//app-wrapper-->
 
 <!-- Modal Konfirmasi Hapus -->
-<?php foreach ($artikels as $artikel) : ?>
-    <div class="modal fade" id="deleteModal<?= $artikel->id_artikel ?>" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<?php foreach ($all_data_meta as $meta) : ?>
+    <div class="modal fade" id="deleteModal<?= $meta['id_seo'] ?>" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -75,7 +78,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                    <a href="<?= base_url('admin/artikel/delete') . '/' . $artikel->id_artikel ?>" class="btn btn-danger">Hapus</a>
+                    <a href="<?= base_url('admin/meta/delete') . '/' . $meta['id_seo'] ?>" class="btn btn-danger">Hapus</a>
                 </div>
             </div>
         </div>
