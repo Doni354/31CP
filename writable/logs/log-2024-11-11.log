@@ -1,0 +1,60 @@
+INFO - 2024-11-11 03:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-11 03:26:48 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'u1658729_tigapuluhsatu' in D:\Project\company-profile-main\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\Project\company-profile-main\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'u1658729_tigapu...', 3306, '', 0)
+#1 D:\Project\company-profile-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Project\company-profile-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Project\company-profile-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Project\company-profile-main\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Project\company-profile-main\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Project\company-profile-main\app\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+#7 D:\Project\company-profile-main\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#8 D:\Project\company-profile-main\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#9 D:\Project\company-profile-main\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Project\company-profile-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Project\company-profile-main\system\Commands\Server\rewrite.php(47): require_once('D:\\Project\\comp...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'u1658729_tigapuluhsatu' in D:\Project\company-profile-main\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Project\company-profile-main\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Project\company-profile-main\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Project\company-profile-main\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Project\company-profile-main\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Project\company-profile-main\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Project\company-profile-main\app\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+#6 D:\Project\company-profile-main\system\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+#7 D:\Project\company-profile-main\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+#8 D:\Project\company-profile-main\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Project\company-profile-main\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Project\company-profile-main\system\Commands\Server\rewrite.php(47): require_once('D:\\Project\\comp...')
+#11 {main}
+CRITICAL - 2024-11-11 03:26:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'u1658729_tigapuluhsatu'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_profil`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\user\Homectrl.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\user\Homectrl->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\Homectrl))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Project\\company-profile-main\\public\\index.php')
+INFO - 2024-11-11 03:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-11 03:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
