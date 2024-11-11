@@ -1,3 +1,57 @@
+
+<?php
+// Set default language to 'id'
+$lang = session()->get('lang') ?? 'id';
+
+// Get current URL
+$current_url = uri_string();
+
+// Extract the first segment to detect language
+$lang_segment = explode('/', $current_url)[0]; // Detect 'id' or 'en'
+
+// Define page links based on language
+$homeLink = '';  // No trailing slash
+$aboutLink = $lang_segment === 'en' ? 'about' : 'tentang';
+$articleLink = $lang_segment === 'en' ? 'articles' : 'artikel';
+$productLink = $lang_segment === 'en' ? 'service' : 'layanan';
+$activitiesLink = $lang_segment === 'en' ? 'activities' : 'aktivitas';
+$contactLink = $lang_segment === 'en' ? 'contact' : 'kontak';
+
+// Replace map for slugs (to be applied in dynamic content if needed)
+$replace_map = [
+    'tentang' => 'about',
+    'artikel' => 'articles',
+    'layanan' => 'service',
+    'aktivitas' => 'activities',
+    'kontak' => 'contact'
+];
+
+// Define new language segment ('id' <-> 'en')
+$new_lang_segment = ($lang_segment === 'en') ? 'id' : 'en';
+
+// Remove language segment from current URL
+$url_without_lang = substr($current_url, strlen($lang_segment) + 1);
+
+// Only apply the translation logic if switching between different languages
+if ($new_lang_segment !== $lang_segment) {
+    // Switch segments based on the current language
+    foreach ($replace_map as $indonesian_segment => $english_segment) {
+        if ($lang_segment === 'en') {
+            $url_without_lang = str_replace($english_segment, $indonesian_segment, $url_without_lang);
+        } else {
+            $url_without_lang = str_replace($indonesian_segment, $english_segment, $url_without_lang);
+        } 
+    }
+}
+
+// Rebuild the clean URL without trailing slashes
+$clean_url = rtrim($new_lang_segment . '/' . ltrim($url_without_lang, '/'), '/');
+
+// Define base URLs for the language switch
+// If the language switch is the same as the current one, just return the same URL
+$english_url = ($lang_segment === 'en') ? current_url() : base_url('en' . ($url_without_lang ? '/' . ltrim($url_without_lang, '/') : ''));
+$indonesia_url = ($lang_segment === 'id') ? current_url() : base_url('id' . ($url_without_lang ? '/' . ltrim($url_without_lang, '/') : ''));
+?>
 <?= $this->extend('user/template/template') ?>
 <?= $this->section('content'); ?>
 
@@ -25,7 +79,7 @@
                         ?>
                         <p><?= $limitedDescription; ?>...</p> <!-- Menambahkan ellipses di sini -->
                         <!-- Tombol untuk melihat lebih lanjut -->
-                        <a href="<?= base_url('about') ?>" class="btn btn-custom mt-auto">Lihat Selengkapnya</a> <!-- Menggunakan kelas khusus untuk tombol -->
+                        <a href="<?= base_url($lang . '/' . $aboutLink) ?>" class="btn btn-custom mt-auto"><?= lang('Blog.btnReadmore') ?></a> <!-- Menggunakan kelas khusus untuk tombol -->
                     </div>
                 </div>
                 <div class="col-md-1"></div>
