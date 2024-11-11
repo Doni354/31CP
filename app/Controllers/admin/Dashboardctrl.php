@@ -8,6 +8,7 @@ use App\Models\AktivitasModel;
 use App\Models\SliderModel;
 use App\Models\ArtikelModel;
 
+
 class Dashboardctrl extends BaseController
 {
     public function index()
@@ -25,6 +26,7 @@ class Dashboardctrl extends BaseController
         $data['aktivitasCount'] = $aktivitasModel->countAll();
         $data['sliderCount'] = $sliderModel->countAll();
         $data['artikelCount'] = $artikelModel->countAll();
+
 
         return view('admin/dashboard/index', $data);
     }

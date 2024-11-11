@@ -1,6 +1,4 @@
-<?php
-
-namespace Config;
+<?php namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
 
@@ -12,12 +10,14 @@ class Filters extends BaseConfig
 		'csrf'     => \CodeIgniter\Filters\CSRF::class,
 		'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
 		'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-		'usersAuth' => \App\Filters\UsersAuthFilter::class
+		'usersAuth' => \App\Filters\UsersAuthFilter::class,
+		'locale' => \App\Filters\LocaleFilter::class
 	];
 
 	// Always applied before every request
 	public $globals = [
 		'before' => [
+			'locale',
 			'csrf',
 			'usersAuth' => [
 				'except' => [
@@ -36,27 +36,27 @@ class Filters extends BaseConfig
 	];
 
 
-	/**
-	 * List of filter aliases that works on a
-	 * particular HTTP method (GET, POST, etc.).
-	 *
-	 * Example:
-	 * 'post' => ['foo', 'bar']
-	 *
-	 * If you use this, you should disable auto-routing because auto-routing
-	 * permits any HTTP method to access a controller. Accessing the controller
-	 * with a method you don’t expect could bypass the filter.
-	 */
-	public array $methods = [];
+    /**
+     * List of filter aliases that works on a
+     * particular HTTP method (GET, POST, etc.).
+     *
+     * Example:
+     * 'post' => ['foo', 'bar']
+     *
+     * If you use this, you should disable auto-routing because auto-routing
+     * permits any HTTP method to access a controller. Accessing the controller
+     * with a method you don’t expect could bypass the filter.
+     */
+    public array $methods = [];
 
-	/**
-	 * List of filter aliases that should run on any
-	 * before or after URI patterns.
-	 *
-	 * Example:
-	 * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
-	 */
-	public $filters = [
-		'usersAuth' => \App\Filters\UsersAuthFilter::class,
-	];
+    /**
+     * List of filter aliases that should run on any
+     * before or after URI patterns.
+     *
+     * Example:
+     * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
+     */
+    public $filters = [
+        'usersAuth' => \App\Filters\UsersAuthFilter::class,
+    ];
 }

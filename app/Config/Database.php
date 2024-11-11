@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => '31',
+        'database' => 'u1658729_elecompid',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
