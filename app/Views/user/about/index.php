@@ -34,8 +34,8 @@
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5 m-auto">
-                    <div class="how-work-img wow fadeInUp" data-wow-delay="0.3s">
-                        <img data-src="asset-user/images/<?= $descper->foto_utama; ?>" alt="<?= $descper->nama_perusahaan; ?>" class="img-fluid lazyload">
+                <div class="how-work-img" data-aos="fade-up">
+                <img data-src="/asset-user/images/<?= $descper->foto_utama; ?>" alt="Logo Utama" class="img-fluid img-overlap lazyload">
                     </div>
                 </div>
             </div>
