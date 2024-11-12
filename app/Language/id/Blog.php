@@ -28,4 +28,5 @@ return [
     'contactUs' => 'Hubungi Kami',
     'popularArticles' => 'Artikel Lainnya',
     'alsoRead' => 'Baca Juga',
+    'newsArticles' => 'Artikel Terbaru',
 ];

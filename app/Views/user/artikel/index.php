@@ -12,7 +12,7 @@
         <div class="d-inline-flex text-white">
             <h6 class="text-uppercase m-0"><a href="<?= base_url('/') ?>"><?php echo lang('Blog.headerHome'); ?></a></h6>
             <h6 class="text-white m-0 px-3">/</h6>
-            <h6 class="text-uppercase text-white m-0"><?php echo lang('Blog.headerArticle');  ?></h6>
+            <h6 class="text-uppercase text-white m-0"><?php echo lang('Blog.headerArticle'); ?></h6>
         </div>
     <?php endforeach; ?>
 </div>

@@ -28,4 +28,6 @@ return [
     'contactUs' => 'Contact Us',
     'popularArticles' => 'Other Articles',
     'alsoRead' => 'Also Read',
+    'newsArticles' => 'New Article',
+    
 ];
