@@ -121,10 +121,14 @@
                     <img class="img-fluid w-100" src="<?= base_url('asset-user/images/' . $artikel->foto_artikel); ?>" style="object-fit: cover;" alt="<?= htmlspecialchars(strip_tags($artikel->judul_artikel)); ?>"> <!-- Tambahkan alt untuk SEO -->
                     <div class="bg-white border border-top-0 p-4">
                         <div class="mb-3">
-                            <a class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($artikel->created_at)); ?></a>
+                            <p class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($artikel->created_at)); ?></p>
                         </div>
-                        <h1 class="display-5 mb-2"><?= htmlspecialchars($artikel->judul_artikel); ?></h1> <!-- Menggunakan htmlspecialchars untuk keamanan -->
-                        <p class="fs-5"><?= htmlspecialchars($artikel->deskripsi_artikel); ?></p> <!-- Menggunakan htmlspecialchars untuk keamanan -->
+                        <h1 class="display-5 mb-2"><?= $locale === 'id' ? strip_tags($artikel->judul_artikel) : strip_tags($artikel->judul_artikel_en) ?></h1> <!-- Menggunakan htmlspecialchars untuk keamanan -->
+                        <p class="fs-5"><?php if (lang('Blog.Languange') == 'en') {
+                                echo $artikel->deskripsi_artikel_en;
+                            } else {
+                                echo $artikel->deskripsi_artikel;
+                            } ?></p> <!-- Menggunakan htmlspecialchars untuk keamanan -->
                     </div>
                 </div>
                 <!-- News Detail End -->

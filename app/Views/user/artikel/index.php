@@ -37,7 +37,7 @@
                         <img class="img-fluid w-100" style="object-fit: cover;" src="<?= base_url('asset-user/images/' . $row->foto_artikel); ?>" loading="lazy" alt="<?= htmlspecialchars(strip_tags($row->judul_artikel)); ?>"> <!-- Tambahkan alt untuk SEO -->
                         <div class="bg-white border border-top-0 p-4 flex-grow-1">
                             <div class="mb-2">
-                                <a class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($row->created_at)); ?></a>
+                                <p class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($row->created_at)); ?></p>
                             </div>
                             <a class="h4 display-5" href="<?= base_url(($locale !== '' ? $locale . '/' : '') . ($locale === 'en' ? 'articles' : 'artikel') . '/' . (($locale === 'en') ? $row->slug_en : $row->slug_in)) ?>"><?= session('lang') === 'id' ? strip_tags($row->judul_artikel) : strip_tags($row->judul_artikel_en); ?>...</a> <!-- Menggunakan htmlspecialchars untuk keamanan -->
                             <p><?= substr(strip_tags(session('lang') === 'id' ? $row->deskripsi_artikel : $row->deskripsi_artikel_en), 0, 30) ?>...</p> <!-- Menggunakan htmlspecialchars untuk keamanan -->
