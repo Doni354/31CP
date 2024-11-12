@@ -39,7 +39,7 @@
                             <div class="mb-2">
                                 <a class="text-uppercase mb-3 text-body"><?= date('d F Y', strtotime($row->created_at)); ?></a>
                             </div>
-                            <a class="h4 display-5" href="<?= base_url('artikel/detail/' . $row->id_artikel . '/' . url_title($row->judul_artikel)) ?>"><?= htmlspecialchars(substr(strip_tags($row->judul_artikel), 0, 10)) ?>...</a> <!-- Menggunakan htmlspecialchars untuk keamanan -->
+                            <a class="h4 display-5" href="<?= base_url(($locale !== '' ? $locale . '/' : '') . ($locale === 'en' ? 'articles' : 'artikel') . '/' . (($locale === 'en') ? $row->slug_en : $row->slug_in)) ?>"><?= htmlspecialchars(substr(strip_tags($row->judul_artikel), 0, 10)) ?>...</a> <!-- Menggunakan htmlspecialchars untuk keamanan -->
                             <p><?= htmlspecialchars(substr(strip_tags($row->deskripsi_artikel), 0, 30)) ?>...</p> <!-- Menggunakan htmlspecialchars untuk keamanan -->
                         </div>
                     </div>
