@@ -98,14 +98,14 @@
 <div class="container-fluid page-header" style="background-image: linear-gradient(rgba(4, 15, 40, 0.7), rgba(4, 15, 40, 0.7)), url('<?= base_url('asset-user/images/hero_1.jpg'); ?>');">
     <?php foreach ($profil as $perusahaan) : ?>
         <h1 class="display-3 text-uppercase text-white mb-3">
-            <?php echo lang('Blog.titleArticles');
+            <?php echo lang('Blog.titleOurarticle');
             if (!empty($perusahaan)) {
-                echo ' ' . htmlspecialchars($perusahaan->nama_perusahaan); // Menghindari XSS
+                echo ' ' . $perusahaan->nama_perusahaan; // Menghindari XSS
             } ?></h1>
         <div class="d-inline-flex text-white">
             <h6 class="text-uppercase m-0"><a href="<?= base_url('/') ?>"><?php echo lang('Blog.headerHome'); ?></a></h6>
             <h6 class="text-white m-0 px-3">/</h6>
-            <h6 class="text-uppercase text-white m-0"><?php echo lang('Blog.headerActivities');  ?></h6>
+            <h6 class="text-uppercase text-white m-0"><?php echo lang('Blog.headerArticle');  ?></h6>
         </div>
     <?php endforeach; ?>
 </div>
