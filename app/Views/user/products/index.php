@@ -25,13 +25,13 @@
         <?php foreach ($tbproduk as $produk) : ?>
             <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
                 <div class="position-relative portfolio-box">
-                    <img src="asset-user/images/<?= $produk->foto_produk; ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
+                    <img src="/asset-user/images/<?= $produk->foto_produk; ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
                                                                                         echo $produk->nama_produk_en;
                                                                                     } else {
                                                                                         echo $produk->nama_produk_in;
                                                                                     } ?>" class="img-fluid" width="456.6" height="400">
 
-                    <a class="portfolio-title shadow-sm" href="<?= base_url('product/detail/' . $produk->id_produk . '/' . url_title($produk->nama_produk_en) . '_' . url_title($produk->nama_produk_in)) ?>">
+                    <a class="portfolio-title shadow-sm" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'service' : 'layanan') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>">
                         <p class="h4 text-uppercase">
                             <?php if (lang('Blog.Languange') == 'en') {
                                 echo $produk->nama_produk_en;

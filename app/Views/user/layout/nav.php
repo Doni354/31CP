@@ -73,7 +73,7 @@ $indonesia_url = ($lang_segment === 'id') ? current_url() : base_url('id' . ($ur
                     <a href="<?= base_url($lang . '/' . $activitiesLink) ?>" class="nav-item nav-link" data-page="activities"><?php echo lang('Blog.headerActivities'); ?></a>
                     <a href="<?= base_url($lang . '/' . $contactLink) ?>" class="nav-item nav-link" data-page="contact"><?php echo lang('Blog.headerContact'); ?></a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><?php echo lang('Blog.headerLanguage'); ?></a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><?= lang('Blog.headerLanguage') ?></a>
                         <div class="dropdown-menu m-0">
                             <a href="<?= $indonesia_url ?>" class="dropdown-item">Indonesia</a>
                             <a href="<?= $english_url ?>" class="dropdown-item">English</a>

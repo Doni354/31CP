@@ -65,12 +65,7 @@
     <!-- Footer -->
     <?= $this->include('user/layout/footer'); ?>
 
-    <!-- WhatsApp Icon -->
-    <?php foreach ($profil as $iconwa) : ?>
-        <a class="whats-app" href="<?= $iconwa->link_whatsapp ?>" target="_blank" style="position: fixed; bottom: 30px; right: 10px; z-index: 1000; transition: transform 0.3s ease-in-out;">
-            <img data-src="<?= base_url('asset-user/images/iconwa.png'); ?>" alt="WhatsApp" class="my-float lazyload" style="width: 80px; height: auto; padding: 10px;">
-        </a>
-    <?php endforeach; ?>
+    
 
     <style>
         .whats-app:hover {
