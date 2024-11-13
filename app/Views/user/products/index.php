@@ -31,7 +31,7 @@
                                                                                         echo $produk->nama_produk_in;
                                                                                     } ?>" class="img-fluid" width="456.6" height="400">
 
-                    <a class="portfolio-title shadow-sm" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'service' : 'layanan') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>">
+                    <a class="portfolio-title shadow-sm" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'product' : 'produk') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>">
                         <p class="h4 text-uppercase">
                             <?php if (lang('Blog.Languange') == 'en') {
                                 echo $produk->nama_produk_en;

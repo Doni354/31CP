@@ -88,8 +88,8 @@ $routes->get('/', function () {
 $routes->group('id', function ($routes) {
     $routes->get('', 'user\Homectrl::index'); // Homepage for ID
     $routes->get('tentang', 'user\Aboutctrl::index'); // About page in ID
-    $routes->get('layanan', 'user\Productsctrl::index'); // Service topics in ID
-    $routes->get('layanan/(:segment)', 'user\Productsctrl::detail/$1'); // Service detail
+    $routes->get('produk', 'user\Productsctrl::index'); // Service topics in ID
+    $routes->get('produk/(:segment)', 'user\Productsctrl::detail/$1'); // Service detail
     $routes->get('aktivitas', 'user\Aktivitasctrl::index'); // Activities in ID
     $routes->get('aktivitas/(:segment)', 'user\Aktivitasctrl::detail/$1'); // Activity detail
     $routes->get('artikel', 'user\Artikelctrl::index'); // Articles in ID
@@ -100,8 +100,8 @@ $routes->group('id', function ($routes) {
 $routes->group('en', function ($routes) {
     $routes->get('', 'user\Homectrl::index'); // Homepage for EN
     $routes->get('about', 'user\Aboutctrl::index'); // About page in EN
-    $routes->get('service', 'user\Productsctrl::index'); // Service in EN
-    $routes->get('service/(:segment)', 'user\Productsctrl::detail/$1'); // Service detail
+    $routes->get('product', 'user\Productsctrl::index'); // Service in EN
+    $routes->get('product/(:segment)', 'user\Productsctrl::detail/$1'); // Service detail
     $routes->get('activities', 'user\Aktivitasctrl::index'); // Activities in EN
     $routes->get('activities/(:segment)', 'user\Aktivitasctrl::detail/$1'); // Activity detail
     $routes->get('articles', 'user\Artikelctrl::index'); // Articles in EN

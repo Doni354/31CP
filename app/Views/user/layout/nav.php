@@ -12,7 +12,7 @@ $lang_segment = explode('/', $current_url)[0]; // Detect 'id' or 'en'
 $homeLink = '';  // No trailing slash
 $aboutLink = $lang_segment === 'en' ? 'about' : 'tentang';
 $articleLink = $lang_segment === 'en' ? 'articles' : 'artikel';
-$productLink = $lang_segment === 'en' ? 'service' : 'layanan';
+$productLink = $lang_segment === 'en' ? 'product' : 'produk';
 $activitiesLink = $lang_segment === 'en' ? 'activities' : 'aktivitas';
 $contactLink = $lang_segment === 'en' ? 'contact' : 'kontak';
 
@@ -20,7 +20,7 @@ $contactLink = $lang_segment === 'en' ? 'contact' : 'kontak';
 $replace_map = [
     'tentang' => 'about',
     'artikel' => 'articles',
-    'layanan' => 'service',
+    'produk' => 'product',
     'aktivitas' => 'activities',
     'kontak' => 'contact'
 ];

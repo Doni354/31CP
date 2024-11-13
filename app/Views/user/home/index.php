@@ -111,7 +111,7 @@ $indonesia_url = ($lang_segment === 'id') ? current_url() : base_url('id' . ($ur
                     <div class="product-card h-100 shadow-sm" data-aos="fade-up">
                         <img src="asset-user/images/<?= $produk->foto_produk; ?>" alt="<?php echo lang('Blog.Languange') == 'en' ? $produk->nama_produk_en : $produk->nama_produk_in; ?>" class="card-img-top img-fluid lazyload">
                         <div class="card-body d-flex flex-column">
-                            <a href="<?= base_url('product/detail/' . $produk->id_produk . '/' . url_title($produk->nama_produk_en) . '_' . url_title($produk->nama_produk_in)) ?>" class="btn btn-custom mt-auto">
+                            <a  href="<?= base_url($locale . '/' . ($locale === 'en' ? 'product' : 'produk') . '/' . (($locale === 'en') ? $produk->slug_en : $produk->slug_in)) ?>" class="btn btn-custom mt-auto">
                                 <?php echo lang('Blog.Languange') == 'en' ? $produk->nama_produk_en : $produk->nama_produk_in; ?>
                             </a>
                         </div>

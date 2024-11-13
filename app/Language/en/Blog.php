@@ -5,14 +5,14 @@ return [
     'email' => 'Email us',
     'headerHome' => 'Home',
     'headerAbout' => 'About',
-    'headerProducts' => 'Services',
+    'headerProducts' => 'Products',
     'headerArticle' => 'Article',
     'headerActivities' => 'Activities',
     'headerContact' => 'Contact',
     'headerLanguage' => 'Language',
     'btnReadmore' => 'Read More',
     'btnMoreproducts' => 'Other Service',
-    'btnOurproducts' => 'Our Services',
+    'btnOurproducts' => 'Our Product',
     'btnRecomenprodcuts' => 'Recommended Services',
     'titleOurproducts' => 'Products of',
     'titleOurarticle' => 'Article of',
@@ -31,6 +31,7 @@ return [
     'Read' => 'Also Read',
     'newsArticles' => 'New Article',
     'titleProductof' => 'Products of',
+    'menu' => 'Quick Link',
     
     
     
