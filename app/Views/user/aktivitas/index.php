@@ -24,7 +24,7 @@
         <?php foreach ($tbaktivitas as $aktivitas) : ?>
             <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
                 <div class="position-relative portfolio-box">
-                    <img src="asset-user/images/<?= $aktivitas->foto_aktivitas ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
+                    <img src="/asset-user/images/<?= $aktivitas->foto_aktivitas ?>" alt="<?php if (lang('Blog.Languange') == 'en') {
                                                                                                 echo $aktivitas->nama_aktivitas_en;
                                                                                             } ?>
                                     <?php if (lang('Blog.Languange') == 'in') {
