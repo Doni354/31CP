@@ -30,7 +30,7 @@
                                     <?php if (lang('Blog.Languange') == 'in') {
                                         echo $aktivitas->nama_aktivitas_in;
                                     } ?>" class="img-fluid">
-                    <a class="portfolio-title shadow-sm" href="<?= base_url('activities/detail/' . $aktivitas->id_aktivitas . '/' . url_title($aktivitas->nama_aktivitas_en) . '_' . url_title($aktivitas->nama_aktivitas_in)) ?>">
+                    <a class="portfolio-title shadow-sm" href="<?= base_url($locale . '/' . ($locale === 'en' ? 'activities' : 'aktivitas') . '/' . (($locale === 'en') ? $aktivitas->slug_en : $aktivitas->slug_in)) ?>">
                         <p class="h4 text-uppercase">
                             <?php if (lang('Blog.Languange') == 'en') {
                                 echo $aktivitas->nama_aktivitas_en;
