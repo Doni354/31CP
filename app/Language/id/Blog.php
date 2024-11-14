@@ -16,7 +16,7 @@ return [
     'btnRecomenprodcuts' => 'Layanan Yang Direkomendasikan',
     'titleOurproducts' => 'Layanan dari',
     'titleOurarticle' => 'Artikel dari',
-    'titleActivities' => 'Aktivitas dari',
+    'titleActivitieof' => 'Aktivitas dari',
     'titleOurContact' => 'Kontak dari',
     'titleAboutUs' => 'Tentang Kami',
     'titleAbout' => 'Tentang',

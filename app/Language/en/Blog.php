@@ -16,7 +16,7 @@ return [
     'btnRecomenprodcuts' => 'Recommended Services',
     'titleOurproducts' => 'Products of',
     'titleOurarticle' => 'Article of',
-    'titleActivities' => 'Activities of',
+    'titleActivitieof' => 'Activities of',
     'titleOurContact' => 'Contacts of',
     'titleAboutUs' => 'About Us',
     'titleAbout' => 'About',
