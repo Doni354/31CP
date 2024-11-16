@@ -10,7 +10,7 @@ return [
     'headerActivities' => 'Activities',
     'headerContact' => 'Contact',
     'headerLanguage' => 'Language',
-    'btnReadmore' => 'Read More',
+    'btnReadmore' => 'Read More About Us',
     'btnMoreproducts' => 'Other Service',
     'btnOurproducts' => 'Our Product',
     'btnRecomenprodcuts' => 'Recommended Services',
@@ -32,6 +32,7 @@ return [
     'newsArticles' => 'New Article',
     'titleProductof' => 'Products of',
     'menu' => 'Quick Link',
+    'ALAMATCUY' => 'Adress',
     
     
     

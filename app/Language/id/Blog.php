@@ -30,4 +30,5 @@ return [
     'alsoRead' => 'Baca Juga',
     'newsArticles' => 'Artikel Terbaru',
     'menu' => 'Tautan Cepat',
+    'ALAMATCUY' => 'Alamat',    
 ];

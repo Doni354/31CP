@@ -33,7 +33,7 @@
             <!-- Konten mulai dari deskripsi kontak hingga no_hp digeser ke kanan 100px -->
             <div class="col-md-6 mb-5 mb-md-5" style="padding-top: 100px; padding-left: 100px;">
                 <div class="testimonial">
-                    <h2 style="margin-bottom:0.5px;">Alamat</h2> <!-- Menambahkan judul di atas konten -->
+                    <h2 style="margin-bottom:0.5px;"><?php echo lang('Blog.ALAMATCUY');  ?></h2> <!-- Menambahkan judul di atas konten -->
                     <?php foreach ($profil as $desc): ?>
                         <blockquote style="margin-bottom: 20px;">
                             <p>
